@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>TypeScript: Todo List</title>
+    <link rel="stylesheet" href="app.css" type="text/css" />
+    <script src="http://cdn.bootcss.com/jquery/2.1.0/jquery.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <!-- TODO LIST -->
+    <div id="app">
+        <div class="app-title">
+            <h1>TypeScript: Todo List</h1>
+        </div>
+        <div class="todos"></div>
+        <div class="todo-add"><input class="input"><button class="btn">Add</button></div>
+        <div class="todo-progress"></div>
+    </div>
+
+    <script type="text/javascript">
+        var app = new TodosApp.TodoView({
+            collection: ['jack', 'tom'],
+            el: '#app'
+        });
+    </script>
+</body>
+</html>
