@@ -25,13 +25,7 @@ namespace TodosApp {
             return this;
         }
         remove(model: TodoModel) {
-            var res = [];
-            this.models.forEach(item => {
-                if (item.id !== model.id) {
-                    res.push(item);
-                }
-            });
-            this.models = res;
+            this.models.splice(this.models.indexOf(model), 1);
             return this;
         }
         getModelById(id: string): TodoModel {

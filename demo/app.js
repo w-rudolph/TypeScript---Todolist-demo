@@ -22,13 +22,7 @@ var TodosApp;
             return this;
         };
         TodoModelCollection.prototype.remove = function (model) {
-            var res = [];
-            this.models.forEach(function (item) {
-                if (item.id !== model.id) {
-                    res.push(item);
-                }
-            });
-            this.models = res;
+            this.models.splice(this.models.indexOf(model), 1);
             return this;
         };
         TodoModelCollection.prototype.getModelById = function (id) {
